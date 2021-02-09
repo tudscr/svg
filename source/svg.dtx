@@ -7,7 +7,7 @@
 %% ----------------------------------------------------------------------------
 %%
 %% Copyright (C) Philip Ilten <philten@cern.ch>, 2012-2016
-%% Copyright (C) Falk Hanisch <hanisch.latex@outlook.com>, 2017-2020
+%% Copyright (C) Falk Hanisch <hanisch.latex@outlook.com>, 2017-2021
 %%
 %% ----------------------------------------------------------------------------
 %%
@@ -112,7 +112,7 @@ svg-extract -- Extract independent graphic files from SVG pictures
 %</dtx>
 %<package&identify&main>  {svg}{include SVG pictures}%
 %<package&identify&extract>  {svg-extract}{extract graphics from SVG pictures}%
-  [2020/11/26 v2.03]%
+  [2021/02/09 v2.03]%
 \@tempb
 %</dtx|package&identify>
 % \fi
@@ -257,7 +257,10 @@ svg-extract -- Extract independent graphic files from SVG pictures
 %^^A}
 %^^A\footest{1a5}
   \ToDo{use \cs{@tempa} instead of \cs{svg@tempa} in FamilyKeys!}[v2.03]
-  \ToDo{use \cs{svg@ifvalueisrelax} for every FamilyKey}[v2.03]
+  \ToDo{%
+    use \cs{svg@ifvalueisrelax} for every FamilyKey; drop it, use ...=! instead
+    \url{https://github.com/latex3/latex2e/issues/393}
+  }[v2.03]
   \ToDo{%
     general note to path and file names (umlauts or any other non-ascii) at the 
     very beginning, mention \pkg{grffile}?%
@@ -2588,6 +2591,7 @@ svg-extract -- Extract independent graphic files from SVG pictures
 % an \emph{invalid} check relying on internal commands of package \pkg{pgfsys},
 % whereas these have changed in the latest version.^^A
 % \footnote{\url{https://github.com/ho-tex/transparent/issues/3}}
+% \ToDo{l3backend-opacity comes with support for opacity, maybe try this}
 %    \begin{macrocode}
   \AfterPackage*{transparent}{%
     \ifcsname Gin@driver\endcsname%
@@ -4044,7 +4048,7 @@ svg-extract -- Extract independent graphic files from SVG pictures
 % This macro is used to generate a specific warning with some hints for 
 % troubleshooting, if probably something during the invocation of an external
 % programm went wrong and so the process of exporting/extracting/conversion 
-% was not finished sucessfully.
+% was not finished successfully.
 %    \begin{macrocode}
 \newcommand*\svg@troubleshooting[4]{%
   \PackageWarning{#1}{%
