@@ -112,7 +112,7 @@ svg-extract -- Extract independent graphic files from SVG pictures
 %</dtx>
 %<package&identify&main>  {svg}{include SVG pictures}%
 %<package&identify&extract>  {svg-extract}{extract graphics from SVG pictures}%
-  [2021/02/09 v2.03]%
+  [2021/03/05 v2.03]%
 \@tempb
 %</dtx|package&identify>
 % \fi
@@ -270,8 +270,8 @@ svg-extract -- Extract independent graphic files from SVG pictures
 %^^A file~names. Especially when DVI~output is active using quotes will 
 %^^A certainly cause an error. 
   \ToDo{Hint for cropped text}[v2.03]
+  \ToDo{switch to \cls{l3doc}? or provide package \pkg{tudscrdoc}?}[v2.03]
   \ToDo{Use \cs{GitHub...} from \cls{tudscrdoc} for related links}[v2.03]
-  % TODO update to tudscrdoc v2.07
   \providerobustcmd*\default[1]{\val{\textit{#1}}}
   \edef\filename{\jobname.dtx}\expandafter\GetFileInfo\expandafter{\filename}%
   \DocInput{\filename}
