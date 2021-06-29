@@ -112,7 +112,7 @@ svg-extract -- Extract independent graphic files from SVG pictures
 %</dtx>
 %<package&identify&main>  {svg}{include SVG pictures}%
 %<package&identify&extract>  {svg-extract}{extract graphics from SVG pictures}%
-  [2021/05/18 v2.03]%
+  [2021/06/29 v2.03]%
 \@tempb
 %</dtx|package&identify>
 % \fi
@@ -2952,7 +2952,7 @@ svg-extract -- Extract independent graphic files from SVG pictures
   \ifx\svg@ink@dpi\relax\else--export-dpi=\svg@ink@dpi\space\fi%
   \if@svg@ink@latex--export-latex\space\fi%
   \ifx\svg@ink@opt\@empty\else\svg@ink@opt\space\fi%
-  \ifcase\svg@ink@ver\relax% 0.x detected
+  \ifcase\svg@ink@ver% 0.x detected
     --without-gui\space%
     --export-#3="#2"\space%
   \else% 1.x or nothing detected
@@ -4191,6 +4191,9 @@ svg-extract -- Extract independent graphic files from SVG pictures
           `inkscapeversion=<version>' manually but this is very\MessageBreak%
           unlikely to work%
           }%
+%    \end{macrocode}
+% \ToDo{log found version}[v2.03]
+%    \begin{macrocode}
         \fi%
       }%
     \expandafter\svg@tempb\svg@tempa Inkscape \m@ne.\@nil%
